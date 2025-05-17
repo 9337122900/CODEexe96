@@ -1,0 +1,314 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <meta charset="UTF-8" />  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>  
+  <title>CODE exe</title>  
+  <style>  
+  *{  
+    margin: 0%;  
+    padding:0%;  
+  }  
+  body {  
+    height: 100%;  
+    width: 100%;  
+    margin: 0;  
+    font-family: Arial, sans-serif;  
+    background:linear-gradient(to right, rgb(165, 165, 214), rgba(14, 3, 110, 0.822));  
+  }  
+
+  header {  
+    background-color: rgb(1, 8, 39);  
+    color: white;  
+    height:10%;  
+    width: 100%;  
+    align-items:center;  
+    position: fixed;  
+    display:flex;  
+    border-style: solid;  
+    border-width: 0px;  
+    border-bottom-width: 0px;  
+    z-index: 1000;  
+  }  
+
+  .fakenav{  
+    background-color: rgb(1, 8, 39);  
+    height: 60px;  
+  }  
+
+  .web{  
+    display: flex;  
+    margin-right: 5px;  
+  }  
+
+  nav a {  
+    color: white;  
+    text-decoration: none;  
+    margin-left: 10px;  
+  }  
+  nav{  
+    width:85%;  
+    display:flex;  
+    align-items: center;  
+  }  
+
+  .hero {  
+    color: rgb(255, 255, 255);  
+    padding: 3.5rem 2rem;
+    text-align: center;  
+    background:url(bg-clg1.jpg),linear-gradient(to right, rgba(165, 165, 214,0.45), rgba(14, 3, 110, 0.822));   
+    background-blend-mode:multiply;    
+    background-position:20%;
+    background-size:cover;  
+  }  
+
+  .courses {  
+    padding: 2rem;  
+    display: grid;  
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  
+    gap: 2rem;  
+  }  
+
+  button a{  
+    text-decoration: none;  
+    color:white;  
+  }  
+
+  .course-card {  
+    background: rgb(217, 237, 248);  
+    padding: 1rem;  
+    border-radius: 8px;  
+    box-shadow: 0.8px 5px 20px;  
+    display: flex;  
+    justify-content: space-between;  
+  }  
+
+  .course-card h3 {  
+    margin-top: 0;  
+    margin-bottom: 3px;  
+  }  
+
+  .course-card button {  
+    align-self: center;
+    background: #0A192F;
+    color: white;  
+    border: none;  
+    padding: 10px;  
+    cursor: pointer;  
+    width: 50px;  
+    height: 45px;  
+    border-radius: 45%;  
+    box-shadow: 0.1px 1px 10px rgb(57, 47, 114);
+    transform: scale(1.15);
+    transform: translate(+5px);
+  }  
+
+  .course-card button:hover{  
+    box-shadow: 2px 2px 20px #00008b;  
+  }  
+
+  footer {  
+    background-color: #0a192f;  
+    background:linear-gradient(to left ,rgb(17, 45, 73),rgb(14, 1, 39));
+    color: white;  
+    text-align: center;  
+    padding: 1rem;  
+    margin-top: 2rem;
+  }  
+
+  .logo {  
+    padding: 0%;  
+    width: 15%;  
+    height: 100%;  
+    overflow: hidden;  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    cursor: pointer;  
+  }  
+
+  .logo img {  
+    margin-left: 40px;  
+    height: 90px;  
+    width:74px;  
+    object-fit: cover;  
+    transform:scale(2.8);  
+  }  
+
+  .sidebar {  
+  text-wrap: nowrap;
+    overflow: hidden;
+    height: 40%;  
+    width: 0;  
+    position: fixed;  
+    top: 40px;  
+    left: 0;  
+    background: rgba(0, 0, 0, 0.4);  
+    backdrop-filter: blur(8px);    
+    transition: 0.5s;  
+    padding-top: 40px;  
+    display: grid;
+    justify-content: center;
+    z-index: 1500;  
+    border-bottom-right-radius: 20px; 
+    box-shadow: 0 0 10px;
+    border-collapse: collapse;
+  }  
+
+  .sidebar a {  
+    padding: 10px 20px;  
+    text-decoration: none;  
+    font-size: 22px;  
+    color: white;  
+    display: block;  
+    transition: 0.5s;  
+   
+  }  
+
+  .sidebar a:hover {  
+    background-color: #575757;  
+  }  
+
+  a #return{
+    display: flex;
+    justify-content:center;
+    margin-right: 15px;
+    font-weight:800;
+    font-size: xx-large;
+    padding: 5px 10px; 
+
+  }
+  #rtn{
+    padding:0px 0px;
+    text-align: center;
+  }
+  #mobileview{
+      position:fixed;
+      height:100%;
+      width:100%;
+      background: rgba(0, 0, 0, 0.5);  
+      backdrop-filter: blur(8px);
+      z-index: -1000;
+      opacity: 0;
+  }
+  @media(min-width:426px){
+    #mobileview{
+      position:fixed;
+      height:100%;
+      width:100%;
+      background: rgba(0, 0, 0, 0.5);  
+      backdrop-filter: blur(12px);
+      z-index: 1010;
+      opacity: 1;
+      display: flex;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      color:white;
+  }
+  }
+  
+  </style>  
+  <link rel="stylesheet" href="animations/home.css"> 
+
+</head>  
+<body>  
+<!-- Don't Allow Desktop View-->
+ <div id="mobileview"><h1>This Website Is Only For Mobile Users , You Can't Open It with Desktop Mode ! </h1></div>
+ <script>fetch('visitors.php')</script>
+
+<!-- Sidebar -->  
+<div id="mySidebar" class="sidebar"> 
+  <a href="books.html">Books</a>  
+  <a href="credit.html">Credits</a>
+  <a href="follow.html">Follow Us</a>
+  <a href="about.html">About</a>
+
+  <a id="rtn"><div id="return" onclick="toggleSidebar()" >&LeftArrow;</div></a>
+
+</div>  
+<header>  
+  <span class="logo" onclick="toggleSidebar()"><img src="Logo.png" alt="Logo"></span>  
+  <nav>  
+    <div class="web"><h2>CODE</h2><sub>exe</sub></div>  
+    <a href="index.html">Home</a>  
+    <a href="courses.html">Tutorials</a>  
+    <a href="Contact.html">Contact</a>  
+  </nav>  
+  <fakenav></fakenav>  
+</header>  
+
+<div class="fakenav"></div>  
+
+<section class="hero">  
+  <h2>Resources For BSc Computer Science Students</h2>  
+  <p>These Resources Are provided By Students Of Comp.sc Dept. of  Anchal College, Padampur</p> 
+</section>  
+
+<section class="courses">  
+
+  <div id="c1" class="course-card">  
+    <div class="text"><h3>1ST SEMESTER</h3>  
+      <p>Intro to Computer science & Python Programming + Problem Solving Using C</p></div>  
+    <button><a href="semesters/first.html">Enter</a></button>  
+  </div>  
+
+  <div id="c2" class="course-card">  
+    <div class="text"><h3>2ND SEMESTER</h3>  
+      <p>Data Structures + Database Management System</p></div>  
+    <button><a href="semesters/second.html">Enter</a></button>  
+  </div>  
+
+  <div id="c3" class="course-card">  
+    <div class="text"><h3>3RD SEMESTER</h3>  
+      <p>Web technologies + Operating System + Computer Organization</p></div>  
+    <button><a href="semesters/third.html">Enter</a></button>  
+  </div>  
+
+  <div id="c4" class="course-card">  
+    <div class="text"><h3>4TH SEMESTER</h3>  
+      <p>Computer Network + Software Engineering + OOPs Using C++</p></div>  
+    <button><a href="semesters/fourth.html">Enter</a></button>  
+  </div>  
+
+  <div id="c5" class="course-card">  
+    <div class="text"><h3>5TH SEMESTER</h3>  
+      <p>Java + Computer Graphics + Artificial Intelligence</p></div>  
+    <button><a href="semesters/fiveth.html">Enter</a></button>  
+  </div>  
+
+  <div id="c6" class="course-card">  
+    <div class="text"><h3>6TH SEMESTER</h3>  
+      <p>Algorithm-Design Technique + Project Work-1</p></div>  
+    <button><a href="semesters/sixth.html">Enter</a></button>  
+  </div>  
+
+  <div id="c7" class="course-card">  
+    <div class="text"><h3>OTHER SUBJECTS</h3>  
+      <p>AEC + VAC + MDC + MINOR Subjects</p></div>  
+    <button><a href="semesters/others.html">Enter</a></button>  
+  </div>  
+</section>  
+
+<footer>  
+  <p>&ac; Dear visitor, Thanks for visiting our Website</p>  
+</footer>   
+<script>  
+function toggleSidebar() {  
+  const sidebar = document.getElementById("mySidebar"); 
+  const image=document.querySelector("img");
+  if (sidebar.style.width === "40%") {  
+    sidebar.style.width = "0%";  
+    sidebar.style.height = "0%";  
+    sidebar.style.zIndex = "-1000";
+   
+  } else {  
+    sidebar.style.width = "40%";  
+    sidebar.style.height = "40%";  
+    sidebar.style.zIndex = "1000"; 
+  }  
+}  
+
+</script>  
+</body>  
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us | Code exe</title>
+  <style>
+    body {
+      height: 100%;
+      width:100%;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background:linear-gradient(to left ,rgb(17, 45, 73),rgb(14, 1, 39));
+    }
+    header {
+      z-index: 1001;
+      background-color: rgb(1, 8, 39);
+      color: white;
+      height:10%;
+      width: 100%;;
+      align-items:center;
+      position: fixed;
+      border-style: solid;
+      border-width: 0px;
+      border-bottom-width: 0px;
+      display:flex;
+    }
+    .fakenav{
+      background-color: rgb(1, 8, 39);
+      height: 60px; 
+    }
+    .web{
+      display: flex;
+      margin-right: 5px;
+    }
+    sub{
+      margin-top: 22px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 10px;
+    }
+    nav{
+      display:flex;
+      align-items: center;
+    }
+    .container {
+      max-width: 700px;
+      margin: 50px auto;
+      background-color:rgb(143, 147, 190);
+      background: linear-gradient(to right, rgb(165, 165, 214), rgba(12, 2, 100, 0.822));
+      padding: 30px;
+      border-radius: 3px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+
+    p.description {
+      text-align: center;
+      font-size: 1.1rem;
+      color:linear-gradient(to left ,black,white);
+      margin-bottom: 30px;
+    }
+
+    .info-box {
+      background: rgb(217, 237, 248);;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      text-align: center;
+      box-shadow: 0.8px 5px 20px;
+    }
+
+    .info-box h2 {
+      color: #1a73e8;
+      margin-bottom: 10px;
+    }
+
+    .info-box a {
+      text-decoration: none;
+      color: #0d47a1;
+      font-size: 1.1rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input, textarea {
+      background: rgb(217, 237, 248);;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      box-shadow: 0.8px 5px 20px;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #1a73e8;
+      box-shadow: 0 0 5px rgba(26, 115, 232, 0.3);
+    }
+
+    button {
+      background: #1a73e8;
+      color: #fff;
+      border: none;
+      padding: 14px;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #0c5dc0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    .logo {
+      padding: 0%;
+      width: 15%;
+      height: 100%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .logo img {
+      margin-left: 40px;
+      height: 90px;
+      width:74px;
+      object-fit: cover;
+      transform:scale(2.8);
+      
+    }
+    #thank1{
+      position:fixed;
+      height:100%;
+      width:100%;
+      background: rgba(0, 0, 0, 0.5);  
+      backdrop-filter: blur(8px);
+      z-index: -1000;
+      opacity: 0;
+    }
+    #thank2{
+      position: fixed;
+      background:linear-gradient(to right,rgba(22, 1, 80,0.5),rgba(148, 158, 160,0.5));
+      border-color: aqua;
+      color: rgb(255, 255, 255);  
+      padding: 3.5rem 2rem;
+      text-align: center;  
+      top:35%;
+      border-radius: 20px;
+      box-shadow: 0.8px 5px 20px rgb(1, 8, 39);
+    }
+
+    #mobileview{
+      position:fixed;
+      height:100%;
+      width:100%;
+      background: rgba(0, 0, 0, 0.5);  
+      backdrop-filter: blur(8px);
+      z-index: -1000;
+      opacity: 0;
+  }
+  @media(min-width:426px){
+    #mobileview{
+      position:fixed;
+      height:100%;
+      width:100%;
+      background: rgba(0, 0, 0, 0.5);  
+      backdrop-filter: blur(12px);
+      z-index: 1010;
+      opacity: 1;
+      display: flex;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      color:white;
+  }
+  }
+  </style>
+  <link rel="stylesheet" href="animations/contact.css">
+</head>
+<body>
+  <!-- Don't Allow Desktop View-->
+ <div id="mobileview"><h1>This Website Is Only For Mobile Users , You Can't Open It with Desktop Mode ! </h1></div>
+<div id="thank1">
+  <div id="thank2"><h2>Your Message Send Succesfully</h2><p>You Can Refresh/Press (Home) To Exit Now </p></div>
+</div>
+  <header>
+    <span class="logo"><img src="Logo.png" ></span>
+    <nav>
+    <div class="web"><h2>CODE</h2><sub>exe</sub></div>
+    
+      <a href="index.html">Home</a>
+      <a href="courses.html">Tutorials</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+    <fakenav></fakenav>
+  </header>
+  <div class="fakenav"></div>
+
+<div class="container">
+  <h1>Contact Us</h1>
+  <p class="description">Need any subject notes? Feel free to reach out to us!</p>
+
+  <div class="info-box">
+    <h2>Email</h2>
+    <a href="mailto:codeexe96@gmail.com">codeexe96@gmail.com</a>
+  </div>
+
+  <form action="https://formsubmit.co/codeexe96@gmail.com" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+    <input type="hidden" name="_next" value="https://your-website-url.com/thank-you.html">
+    <input type="hidden" name="_captcha" value="false">
+
+    <button id="1thank" onclick="thanks()" type="submit">Send Message</button>
+  </form>
+</div>
+
+<footer>
+  &ac; 2025 Code exe. All rights reserved.
+</footer>
+<script>
+  function thanks(){
+    const a=document.getElementById("1thank");
+    const b=document.getElementById("thank1");
+    b.style.zIndex="+1000";
+    b.style.opacity="1";
+  }
+  
+
+</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Connect with Me</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font Awesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #0a0f3c;
+      color: #ffffff;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-size: 2.3rem;
+      padding: 20px;
+      background-color: #16205e;
+      width: 100%;
+      text-align: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      margin: 0;
+      z-index: 999;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    .social-links {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      margin-top: 150px;
+      width: 90%;
+    }
+
+    .social-links a {
+      text-decoration: none;
+      color: #ffffff;
+      background: #16205e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 30px; 
+      border-radius: 20px;
+      font-size: 1.2rem;
+      transition: all 0.4s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+     
+    }
+
+    .social-links a i {
+      margin-right: 15px;
+      font-size: 1.4rem;
+    }
+
+    .social-links a:hover {
+      background: #25338b;
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+    }
+
+    footer {
+      position: absolute;
+      bottom:5px;
+      margin-top: auto;
+      padding: 20px;
+      font-size: 0.85rem;
+      color: #aab3e0;
+      text-align: center;
+    }
+    #mobileview{
+      position:fixed;
+      height:100%;
+      width:100%;
+      background: rgba(0, 0, 0, 0.5);  
+      backdrop-filter: blur(8px);
+      z-index: -1000;
+      opacity: 0;
+  }
+  @media(min-width:426px){
+    #mobileview{
+      position:fixed;
+      height:100%;
+      width:100%;
+      background: rgba(0, 0, 0, 0.5);  
+      backdrop-filter: blur(12px);
+      z-index: 1200;
+      opacity: 1;
+      display: flex;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      color:white;
+  }
+  }
+
+  </style>
+  <link rel="stylesheet" href="animations/follow.css">
+</head>
+
+<body>
+  <!-- Don't Allow Desktop View-->
+ <div id="mobileview"><h1>This Website Is Only For Mobile Users , You Can't Open It with Desktop Mode ! </h1></div>
+  <h1 >Follow Us</h1>
+  <div class="social-links">
+    <a id="c1" href="https://www.facebook.com/profile.php?id=61575836252924" target="_blank">
+      <i class="fab fa-facebook-f"></i> Facebook
+    </a>
+    <a id="c2" href="https://whatsapp.com/channel/0029VbACiboC6ZvgZk46Xp1w" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i>Whatsapp
+    </a>
+    <a  id="c3"href="https://www.instagram.com/codeexe96/" target="_blank">
+      <i class="fab fa-instagram"></i> Instagram
+    </a>
+    <a  id="c4" href="https://www.youtube.com/@CodeExe-n6d" target="_blank">     
+      <i class="fa-brands fa-youtube"></i> Youtube
+    </a>
+  </div>
+
+  <footer>
+    &ac; 2025 Code exe. All rights reserved.
+  </footer>
+</body>
+</html>

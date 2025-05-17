@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - CS Resources</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d1b2a;
+      color: #e0e1dd;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    header {
+      background-color: #1b263b;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+      color: #e0e1dd;
+    }
+
+    main {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    section {
+      margin-bottom: 30px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideUp 0.8s ease-out forwards;
+    }
+
+    section:nth-of-type(2) {
+      animation-delay: 0.3s;
+    }
+
+    section:nth-of-type(3) {
+      animation-delay: 0.6s;
+    }
+
+    @keyframes slideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h2 {
+      color: #778da9;
+    }
+
+    p {
+      line-height: 1.6;
+      color: #cfd8dc;
+    }
+
+    footer {
+      background-color: #1b263b;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+      color: #a9bcd0;
+    }
+
+    a {
+      color: #98c1d9;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    #mobileview{
+      position:fixed;
+      height:100%;
+      width:100%;
+      background: rgba(0, 0, 0, 0.5);  
+      backdrop-filter: blur(8px);
+      z-index: -1000;
+      opacity: 0;
+  }
+  @media(min-width:426px){
+    #mobileview{
+      position:fixed;
+      height:100%;
+      width:100%;
+      background: rgba(0, 0, 0, 0.5);  
+      backdrop-filter: blur(12px);
+      z-index: 1010;
+      opacity: 1;
+      display: flex;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      color:white;
+  }
+  }
+  </style>
+</head>
+<body>
+  <!-- Don't Allow Desktop View-->
+ <div id="mobileview"><h1>This Website Is Only For Mobile Users , You Can't Open It with Desktop Mode ! </h1></div>
+
+  <header>
+    <h1>About This Page</h1>
+  </header>
+
+  <main>
+    <h2>Welcome to Code Exe</h2>  
+<p>
+  This website is specially designed for BSc Computer Science students. Here, we provide high-quality notes, a collection of selective and exam-focused questions, previous year question papers, and other helpful resources to make your exam preparation easier and more effective.
+</p>
+
+    <section>
+      <h2>Why Use This Page?</h2>
+      <p>
+        All our <strong>selective questions</strong> are carefully chosen and highly likely to appear in your exams — making this an essential tool for exam preparation. Our <strong>notes</strong> are simple, well-structured, and easy to understand, helping you grasp even the most complex topics quickly. We aim to make learning effective and stress-free.
+      </p>
+    </section>
+
+    <section>
+      <h2>Support and Community</h2>
+      <p>
+        Your support helps us improve and grow. If you find these resources helpful, consider sharing with your classmates and providing feedback. You can also <a href="contact.html">contact us</a> with suggestions or resource requests.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 CS Resources. All rights reserved.
+  </footer>
+
+</body>
+</html>

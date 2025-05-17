@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Code exe - Courses</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color:rgb(143, 147, 190);
+      background: linear-gradient(to right, rgb(165, 165, 214), rgba(14, 3, 110, 0.822));
+      color: #333;
+    }
+
+    header {
+      background-color: rgb(1, 8, 39);
+      color: white;
+      height:10%;
+      width: 100%;;
+      align-items:center;
+      position: fixed;
+      border-style: solid;
+      border-width: 0px;
+      border-bottom-width: 0px;
+      display:flex;
+    }
+    .fakenav{
+      background-color: rgb(1, 8, 39);
+      height: 60px; 
+    }
+    .web{
+      display: flex;
+      margin-right: 5px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 10px;
+    }
+    nav{
+      display:flex;
+      align-items: center;
+    }
+
+
+    .video-section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .video-section h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .videos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .video-card {
+      background: rgb(217, 237, 248);
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 15px;
+      width: 320px;
+      text-align: center;
+      box-shadow: 0.8px 5px 20px;
+    }
+
+    .video-card iframe {
+      width: 100%;
+      height: 180px;
+      border: none;
+      border-radius: 8px;
+    }
+
+    .video-card h3 {
+      margin-top: 15px;
+      font-size: 18px;
+      color: #222;
+    }
+
+    footer {
+      background:linear-gradient(to left ,rgb(17, 45, 73),rgb(14, 1, 39));
+      color: white;
+      padding: 15px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .logo {
+      padding: 0%;
+      width: 15%;
+      height: 100%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .logo img {
+      margin-left: 40px;
+      height: 90px;
+      width:74px;
+      object-fit: cover;
+      transform:scale(2.8);
+      
+    }
+    #mobileview{
+      position:fixed;
+      height:100%;
+      width:100%;
+      background: rgba(0, 0, 0, 0.5);  
+      backdrop-filter: blur(8px);
+      z-index: -1000;
+      opacity: 0;
+  }
+  @media(min-width:426px){
+    #mobileview{
+      position:fixed;
+      height:100%;
+      width:100%;
+      background: rgba(0, 0, 0, 0.5);  
+      backdrop-filter: blur(12px);
+      z-index: 1010;
+      opacity: 1;
+      display: flex;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      color:white;
+  }
+  }
+  </style>
+  <link rel="stylesheet" href="animations/courses.css">
+</head>
+<body>
+<!-- Don't Allow Desktop View-->
+<div id="mobileview"><h1>This Website Is Only For Mobile Users , You Can't Open It with Desktop Mode ! </h1></div>
+  <header>
+    <span class="logo"><img src="Logo.png" ></span>
+    <nav>
+    <div class="web"><h2>CODE</h2><sub>exe</sub></div>
+    
+      <a href="index.html">Home</a>
+      <a href="courses.html">Tutorials</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+    <fakenav></fakenav>
+  </header>
+  <div class="fakenav"></div>
+
+  <section class="video-section">
+    <h2>Selected Playlist/Video Tutorials </h2>
+    <div class="videos">
+
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/videoseries?si=Rk-nKEQbLmHmS_ks&amp;list=PLxgZQoSe9cg1drBnejUaDD9GEJBGQ5hMt" allowfullscreen></iframe>
+        <h3>C Language Full Playlist</h3>
+      </div>
+
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/videoseries?si=24mJyjOTJ2PHcSSy&amp;list=PLGjplNEQ1it8-0CmoljS5yeV-GlKSUEt0" allowfullscreen></iframe>
+        <h3>Python Prefered Playlist</h3>
+      </div>
+
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/jzuzxEFoiss?si=Fm7XhWq88E1dOq8U" allowfullscreen></iframe>
+        <h3>DBMS Oneshot For Semester</h3>
+      </div>
+
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/videoseries?si=ghjssfi--b5gYJF0&amp;list=PLu0W_9lII9ahIappRPN0MCAgtOu3lQjQi" allowfullscreen></iframe>
+        <h3>Data Structures For Semester</h3>
+      </div>
+
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/videoseries?si=8Wkhkb2YJfNz8PTL&amp;list=PLmXKhU9FNesS4B30OmgxP7nrzq1UhiMiv" allowfullscreen></iframe>
+        <h3>Computer Organization Playlist For Semester</h3>
+      </div>
+
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/HBqWsrqK89U?si=mdtaDtEOnUrQUdXb" allowfullscreen></iframe>
+        <h3>Web Technology Tutorial For Semester</h3>
+      </div>
+
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/videoseries?si=CwwUWYoyfcq6iPnC&amp;list=PLGjplNEQ1it_oTvuLRNqXfz_v_0pq6unW" allowfullscreen></iframe>
+        <h3>JavaScript Tutorial Playlist</h3>
+      </div>
+
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/A4G0hOI6XyQ?si=7akrn4-qHD3ZAG3W" allowfullscreen></iframe>
+        <h3>Operating System Oneshot For Semester</h3>
+      </div>
+
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/mlIUKyZIUUU?si=_VP0lDUZsbXchadA" allowfullscreen></iframe>
+        <h3>Oops Using C++ Oneshot For Semester</h3>
+      </div>
+
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/1V9mhVgVH3A?si=nrbsF3Eb8WavPqPr" allowfullscreen></iframe>
+        <h3>Computer Network Oneshot For Semester</h3>
+      </div>
+
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/Wnk_pArBylM?si=utHyk26BsF66yGAF" allowfullscreen></iframe>
+        <h3>Software Engineering Oneshot For Semester</h3>
+      </div>
+
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/y39OlGrVFD8?si=3GRYz0BXfUZBb4jF" allowfullscreen></iframe>
+        <h3>Artificial Intelligence Oneshot For Semester</h3>
+      </div>
+
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/videoseries?si=XCxf2FylCnRjnRMZ&amp;list=PLu0W_9lII9agS67Uits0UnJyrYiXhDS6q" allowfullscreen></iframe>
+        <h3>Java Playlist For Semester</h3>
+      </div>
+
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/videoseries?si=inG0qaXU3GS_f-yU&amp;list=PLYwpaL_SFmcAtxMe7ahYC4ZYjQHun_b-T" allowfullscreen></iframe>
+        <h3>Computer Graphics Playlist For Semester</h3>
+      </div>
+
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/videoseries?si=oCAiUL79pgYWRqhT&amp;list=PLYwpaL_SFmcBOrMihdkd48kgs6_YP8taa" allowfullscreen></iframe>
+        <h3>Algorithm-Design Technique Playlist For Semester</h3>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>&ac;  2025 Code exe. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
